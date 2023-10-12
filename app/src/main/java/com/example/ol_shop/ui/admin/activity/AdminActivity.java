@@ -1,8 +1,10 @@
-package com.example.ol_shop;
+package com.example.ol_shop.ui.admin.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.ol_shop.R;
 
 public class AdminActivity extends AppCompatActivity {
 
