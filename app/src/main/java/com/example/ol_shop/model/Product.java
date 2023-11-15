@@ -4,10 +4,10 @@ public class Product {
     private String _id;
     private String name;
     private String description;
-    private String price;
+    private Double price;
     private String quantity;
     private String imageProduct;
-    private String categoryId;
+    private Category categoryId;
 
     public String get_id() {
         return _id;
@@ -33,11 +33,11 @@ public class Product {
         this.description = description;
     }
 
-    public String getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
@@ -57,11 +57,11 @@ public class Product {
         this.imageProduct = imageProduct;
     }
 
-    public String getCategoryId() {
+    public Category getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(String categoryId) {
+    public void setCategoryId(Category categoryId) {
         this.categoryId = categoryId;
     }
 }

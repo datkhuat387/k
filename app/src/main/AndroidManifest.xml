@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,12 +13,58 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OL_Shop"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.user.activity.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.activity.AddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.activity.ConfirmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.activity.product.UpdateProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.activity.product.AddProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.activity.category.UpdateCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.activity.category.AddCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.activity.category.ListCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.activity.product.ListProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.activity.WalletActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.activity.PurchaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.activity.DetailCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.activity.DetailProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.admin.activity.AdminActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
