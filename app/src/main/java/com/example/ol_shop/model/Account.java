@@ -37,6 +37,8 @@ public class Account {
         private String _id;
         @SerializedName("username")
         private String username;
+        @SerializedName("passwd")
+        private String passwd;
         @SerializedName("fullname")
         private String fullname;
         @SerializedName("email")
@@ -47,6 +49,8 @@ public class Account {
         private String address;
         @SerializedName("avatar")
         private String avatar;
+        @SerializedName("money")
+        private String money;
         @SerializedName("roleId")
         private String roleId;
 
@@ -68,6 +72,14 @@ public class Account {
 
         public String getFullname() {
             return fullname;
+        }
+
+        public String getPasswd() {
+            return passwd;
+        }
+
+        public void setPasswd(String passwd) {
+            this.passwd = passwd;
         }
 
         public void setFullname(String fullname) {
@@ -104,6 +116,14 @@ public class Account {
 
         public void setAvatar(String avatar) {
             this.avatar = avatar;
+        }
+
+        public String getMoney() {
+            return money;
+        }
+
+        public void setMoney(String money) {
+            this.money = money;
         }
 
         public String getRoleId() {
