@@ -103,9 +103,7 @@ public class DetailProductActivity extends AppCompatActivity {
                     tv_name.setText(product.getName());
                     tv_quantity.setText(product.getQuantity());
                     tv_description.setText(product.getDescription());
-                    DecimalFormatSymbols symbols = new DecimalFormatSymbols();
-                    symbols.setGroupingSeparator('.');
-                    DecimalFormat decimalFormat = new DecimalFormat("#,###", symbols);
+                    DecimalFormat decimalFormat = new DecimalFormat("#,###", new DecimalFormatSymbols());
                     String formattedPrice = decimalFormat.format(product.getPrice());
                     tv_price.setText(formattedPrice);
                     String imageUrl = product.getImageProduct();

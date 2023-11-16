@@ -5,10 +5,64 @@
     android:layout_height="match_parent"
     tools:context=".ui.admin.fragment.home.HomeAdminFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home Admin"
-        />
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="10dp"
+        android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng doanh thu"
+                android:textSize="20dp"
+                android:layout_marginTop="50dp"
+                />
+            <TextView
+                android:id="@+id/tv_total_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="18dp"
+                />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_4"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng số đơn hàng đã thanh toán: "
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/tv_total_bill_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="18dp"
+                />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_4"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng số đơn hàng"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/tv_total_bill_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="18dp"
+                />
+    </LinearLayout>
 </FrameLayout>

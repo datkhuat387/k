@@ -4,6 +4,10 @@ public class Category {
     private String _id;
     private String name;
 
+
+    public Category() {
+    }
+
     public String get_id() {
         return _id;
     }

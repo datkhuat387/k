@@ -65,7 +65,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
-                android:text="TDP số 3, Thị trấn Phúc Thọ, Huyện Phúc Thọ, TP.Hà Nội"
+                android:text="Địa chỉ"
                 android:textSize="18dp" />
 
             <TextView
@@ -115,7 +115,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:maxWidth="150dp"
-                        android:text="10000000"
+                        android:text="0"
                         android:textColor="@color/gray_3"
                         android:textSize="16dp" />
 
@@ -124,7 +124,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="right"
-                        android:text="3"
+                        android:text="0"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -149,7 +149,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="1000000"
+                    android:text="0"
                     android:textColor="@color/red"
                     android:textSize="18dp"
                     android:textStyle="bold" />
@@ -219,7 +219,7 @@
                 android:id="@+id/tv_total_price_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="100000"
+                android:text="0"
                 android:textColor="@color/red"
                 android:textStyle="bold"
                 android:textSize="16dp"

@@ -90,9 +90,7 @@ public class PurchaseActivity extends AppCompatActivity {
                     product = response.body();
                     tv_name.setText(product.getName());
                     tv_category.setText(product.getCategoryId().getName());
-                    DecimalFormatSymbols symbols = new DecimalFormatSymbols();
-                    symbols.setGroupingSeparator('.');
-                    DecimalFormat decimalFormat = new DecimalFormat("#,###", symbols);
+                    DecimalFormat decimalFormat = new DecimalFormat("#,###", new DecimalFormatSymbols());
                     String formattedPrice = decimalFormat.format(product.getPrice());
                     tv_price.setText("₫"+formattedPrice);
                     tv_quantity_product.setText("X"+quantity);
@@ -107,8 +105,9 @@ public class PurchaseActivity extends AppCompatActivity {
                                 .into(img_product);
                     }
                     total = product.getPrice()*quantity;
-                    tv_total_price_1.setText("₫"+total);
-                    tv_total_price_2.setText("₫"+total);
+                    String formattedPrice2 = decimalFormat.format(total);
+                    tv_total_price_1.setText("₫"+formattedPrice2);
+                    tv_total_price_2.setText("₫"+formattedPrice2);
                 }
             }
 
@@ -139,7 +138,7 @@ public class PurchaseActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     int statusCode = response.code();
                     if (statusCode == 200) {
-                        Toast.makeText(PurchaseActivity.this, "Thành công!", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(PurchaseActivity.this, "Thành công!", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(PurchaseActivity.this,ConfirmActivity.class);
                         startActivity(intent);
                     } else {
