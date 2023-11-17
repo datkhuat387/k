@@ -50,7 +50,7 @@ public class Account {
         @SerializedName("avatar")
         private String avatar;
         @SerializedName("money")
-        private String money;
+        private Double money;
         @SerializedName("roleId")
         private String roleId;
 
@@ -118,11 +118,11 @@ public class Account {
             this.avatar = avatar;
         }
 
-        public String getMoney() {
+        public Double getMoney() {
             return money;
         }
 
-        public void setMoney(String money) {
+        public void setMoney(Double money) {
             this.money = money;
         }
 
