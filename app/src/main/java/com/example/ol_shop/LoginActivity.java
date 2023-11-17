@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                                 editor.putString("phone", data.getPhone());
                                 editor.putString("address", data.getAddress());
                                 editor.putString("avatar", data.getAvatar());
-                                editor.putString("money", data.getMoney());
+                                editor.putString("money", data.getMoney().toString());
                                 editor.apply();
                                 if(data != null){
                                     if (data.getRoleId().equals("651bf925468e6af7a621cd54")) {

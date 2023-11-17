@@ -3,6 +3,7 @@ package com.example.ol_shop.network;
 import com.example.ol_shop.model.Account;
 import com.example.ol_shop.model.Bill;
 import com.example.ol_shop.model.Category;
+import com.example.ol_shop.model.ChangePassword;
 import com.example.ol_shop.model.Product;
 import com.example.ol_shop.model.ProductPost;
 import com.example.ol_shop.model.Statistical;
@@ -58,5 +59,9 @@ public interface ManagerService {
     Call<Category> putCategory(@Path("id") String id,@Body Category category);
     @PUT("api/product/{id}")
     Call<ProductPost> putProduct(@Path("id") String id, @Body ProductPost productPost);
+    @PUT("api/account/{id}")
+    Call<Account.Data> putAccount(@Path("id") String id, @Body Account.Data account);
+    @PUT("api/accountChangePasswd/{id}")
+    Call<ChangePassword> putChangePassword(@Path("id") String id, @Body ChangePassword changePassword);
 
 }
