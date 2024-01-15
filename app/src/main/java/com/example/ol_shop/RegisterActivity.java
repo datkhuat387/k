@@ -12,7 +12,10 @@ import android.widget.Toast;
 import com.example.ol_shop.model.Account;
 import com.example.ol_shop.network.ManagerService;
 import com.example.ol_shop.network.RetrofitClient;
+import com.example.ol_shop.ui.user.activity.PurchaseActivity;
 import com.google.android.material.textfield.TextInputLayout;
+
+import java.io.IOException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -67,9 +70,30 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Account.Data> call, Response<Account.Data> response) {
                 if(response.isSuccessful()){
-                    Toast.makeText(RegisterActivity.this, "Đăng ký thành công!", Toast.LENGTH_SHORT).show();
+                    if(response.code() == 200){
+                        Toast.makeText(RegisterActivity.this, "Đăng ký thành công!", Toast.LENGTH_SHORT).show();
+                    }else {
+                        String errorMessage = "Lỗi không xác định";
+                        if (response.errorBody() != null) {
+                            try {
+                                errorMessage = response.errorBody().string();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                        Toast.makeText(RegisterActivity.this, errorMessage, Toast.LENGTH_SHORT).show();
+                    }
+
                 }else {
-                    Toast.makeText(RegisterActivity.this, "Đăng ký thất bại!", Toast.LENGTH_SHORT).show();
+                    String errorMessage = "Lỗi không xác định";
+                    if (response.errorBody() != null) {
+                        try {
+                            errorMessage = response.errorBody().string();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    Toast.makeText(RegisterActivity.this, errorMessage, Toast.LENGTH_SHORT).show();
                 }
             }
 
